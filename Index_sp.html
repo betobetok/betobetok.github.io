@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<title>Alberto Solorzano Kraemer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body class="w3-light-grey">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+function traslateEn() {
+  var a = document.createElement("a");
+  a.target = "_self";
+  a.href = "index.html";
+  a.click();
+}
+function traslateGe() {
+  var a = document.createElement("a");
+  a.target = "_self";
+  a.href = "index_ge.html";
+  a.click();
+}
+</script>
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="d.jpg" style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2></h2>
+          </div>
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-fw w3-margin-right w3-large w3-text-teal"></i>Alberto Solorzano Kraemer</p>
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Mestro en ciencias de Ingenieria Aeroespacial</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i><a onclick="myMap()">Frankfurt am Main, Alemania</a></p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="mailto:betobetok@gmail.com">betobetok@gmail.com</a></p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="tel:+491775834192">0177 58 34 192</a></p>
+          <hr>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Habilidades</b></p>
+          <p><i class="fas fa-keyboard fa-fw w3-margin-right w3-text-teal"></i>Software de Oficina</p>
+          <div id="OfficeSoftware" class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:95%">Muy Habil</div>
+          </div>
+          <p><i class="fa fa-code fa-fw w3-margin-right w3-text-teal"></i>Lenguajes de Programación</p>
+          <div id="ProgramLenguages" class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">Muy Habil</div>
+          </div>
+          <p><i class="fas fa-drafting-compass fa-fw w3-margin-right w3-text-teal"></i>CAD-CAE Software</p>
+          <div id="CAD-CAE" class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:60%">
+              <div class="w3-center w3-text-white">Habil</div>
+            </div>
+          </div>
+          
+          <p><i class="fas fa-microchip fa-fw w3-margin-right w3-text-teal"></i>Microcontroladores</p>
+          <div id="Microcontroller" class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:40%">Habilidad Fundamental</div>
+          </div>
+          <br>
+
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Idiomas</b></p>
+          <p><i class="material-icons fa-fw w3-margin-right w3-text-teal">translate</i>Español</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-center w3-teal" style="height:24px;width:100%">Nativo</div>
+          </div>
+
+          <p><i onclick="traslateEn()" class="material-icons fa-fw w3-margin-right w3-text-teal">translate</i>Inglés</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div onclick="traslateEn()" class="w3-round-xlarge w3-center w3-teal" style="height:24px;width:70%">C1</div>
+          </div>
+          
+          <p><i onclick="traslateGe()" class="material-icons fa-fw w3-margin-right w3-text-teal">translate</i>Alemán</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div onclick="traslateGe()" class="w3-round-xlarge w3-center w3-teal" style="height:24px;width:60%">B2</div>
+          </div>
+          <br>
+        </div>
+        <div id="googleMap" style="width:100%;height:400px;"></div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+
+    <!-- Work Experience -->
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fas fa-business-time fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Experiencia Profecional</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Ingeniero de Administracion de Requerimientos / <a href="https://www.dfs.de" target="_blank">Deutsche Flugsicherung GmbH</a></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2019 - <span class="w3-tag w3-teal w3-round">Actual</span></h6>
+          <ul>
+            <li>Descripción y análisis de los requerimientos para el futuro sistema ATM.</li>
+            <li>Análisis de las especificaciones y requerimientos de usuario.</li>
+            <li>Construcción del modelo de negocio y mantenimiento de la base de datos del sistema.</li>
+          </ul>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Mantenimiento de la Documentación Tecnica / <a href="https://www.lufthansa-technik.com/" target="_blank" >Lufthansa Technik </a> - <a href="https://www.aviationpower.de/" target="_blank" >Aviation Power</a></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Ago 2018 - May 2019</h6>
+          <ul>
+            <li>Digitalización y control de la documentación de mantenimiento de las aeronaves.</li>
+          </ul>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Gerente de Control de Calidad / <a href="https://redwings.aero/" target="_blank">MC Jets</a></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Ene 2015 - Mar 2016</h6>
+          <ul>
+            <li>Supervición del procesos de mantenimiento y control de calidad.</li>
+            <li>Preparación de los programas de capacitación del personal tecnico de mantenimiento.</li>
+            <li>Elaboración y control de los programas de mantenimiento de los aviones en el taller.</li>
+            <li>Conducción de las auditorias al proceso de mantenimiento para la obtención del permiso de taller por parte de la Federal Aviation Administration (FAA, USA).</li>
+          </ul>
+        </div>
+      <div class="w3-container">
+          <h5 class="w3-opacity"><b>Profesor Investigador/ <a href="https://www.unaq.edu.mx/" target="_blank">Universidad Aeronáutica en Querétaro</a></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2011 - Dic 2014</h6>
+          <ul>
+            <li>Profecsor de la Ingeniería en Aeronáutica.</li>
+            <li>Impartición de cursos tecnicos a personal técnico de mantenimiento.</li>
+            <li>Gerente de proyectos, colaboración y desarrollo de proyectos de inovación entre el sector privado y el Consejo Nacional para la Ciencia y la Tecnología (CONACYT).</li>
+            <li>Jefe del departamento de Termodinámica y lider del Taller de Modelos y Prototipos.</li>
+          </ul>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Gerente de Mercado Vertical / <a href="https://new.siemens.com/mx/es.html" target="_blank">Siemens Global Services (Mexico)</a></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2010 - Ago 2011</h6>
+          <ul>
+            <li>Atención a clientes de la industria aeroespacial en México.</li> 
+            <li>Análisis de las estrategias y del mercado aeronáutico en México.</li>
+          </ul>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>CEO / <a href="https://www.computrabajo.com.mx/empresas/acerca-de-mitra-energia-sa-de-cv-A22FE8C32B54FC52" target="_blank">Mitra Energía</a></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2008 - Jul 2010</h6>
+          <ul>
+            <li>Configuración y arranque de la empresa.</li>
+            <li>Administración de la relación con clientes y proveedores.</li>
+            <li>Empleo y supervición del personal técnico.</li>
+          </ul>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Instructor de Mantenimiento de Aeronaves / <a href="https://aeromexicoformacion.com/" target="_blank">Centro de Capacitación Alas de América (Aeromexico)</a></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2004 - Sep 2006</h6>
+          <ul>
+            <li>Capacitación del personal de mantenimiento y pilotos de Aeromexico.</li>
+            <li>Desarrollo de manuales de entrenamiento técnico y de material didáctico para la capacitación.</li>
+          </ul>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Ingeniero de Certificación para el Teller de Avionics / <a href="https://www.aeromexico.com/es-mx/vuela-con-nosotros/alianza-delta-air-lines" target="_blank">Aeromexico Mantenimiento</a></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2004 - Sep 2006</h6>
+          <ul>
+            <li>Certificación de los bancos de prueba y herramientas ante la Federal Aviation Agency (FAA, USA).</li>
+            <li>Diseño y manufactura de bancos de pruebas y herramientas para mantener las capacidades del taller.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Education -->
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fas fa-landmark fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Educación</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Maestría en Ingeniería Aeroespacial / <a href="https://www.unaq.edu.mx/oferta-educativa/posgrado/mia/" target="_blank">Universidad Aeronáutica en Querétaro</a></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>09/2013 – 08/2017</h6>
+          <ul>
+            <li>Campo de estudios: Termodinámica y Aerodinámica.</li>
+            <li>Tesis: Metodologia experimental para identificar el modelo dinámico de un planeador con control de cambio de posición del CG.</li>
+          </ul>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Maestría en Ciencias de la Ingeniería en Sistemas Energéticos / <a href="https://www.ipn.mx/oferta-educativa/posgrado/ver-carrera.html?lg=es&id=132" target="_blank">Instituto Politecnico Nacional</a></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>09/2006 – 02/2008</h6>
+          <ul>
+            <li>Campo de estudios: Termodinámica.</li>
+            <li>Tesis: Correlación para el cálculo de la transferencias de calor en un banco de tubos lisos.</li>
+          </ul>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Ingeniería Aeronáutica (Validación Alemana) / <a href="https://www.ipn.mx/oferta-educativa/educacion-superior/ver-carrera.html?lg=es&id=1" target="_blank">Instituto Politecnico Nacional</a></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>09/2006 – 02/2008</h6>
+          <ul>
+            <li>Campo de estudios: Mantenimiento de Aeronaves y Diseño Mecánico</li>
+            <li>Tesis: Diseño y construcción de un Motor Stirling.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Capacitation -->
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Capacitacion</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Entrenamiento en Mantenimiento de Aeronaves</b></h5>
+          <h6 class="w3-text-teal"><i class="fas fa-folder-open fa-fw w3-margin-right"></i>Avionics</h6>
+          <h6 class="w3-text-teal"><i class="fas fa-folder-open fa-fw w3-margin-right"></i>Mecánica</h6>
+          <h6 class="w3-text-teal"><i class="fas fa-folder-open fa-fw w3-margin-right"></i>Otros</h6> 
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Capacitación como Instructor Tecnico</b></h5>
+          <h6 class="w3-text-teal"><i class="fas fa-folder-open fa-fw w3-margin-right"></i>Técnico</h6>
+          <h6 class="w3-text-teal"><i class="fas fa-folder-open fa-fw w3-margin-right"></i>Educador</h6>
+          <h6 class="w3-text-teal"><i class="fas fa-folder-open fa-fw w3-margin-right"></i>Tutor</h6>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Otros Cursos</b></h5>
+          <h6 class="w3-text-teal"><i class="fas fa-folder-open fa-fw w3-margin-right"></i>CAD-CAE</h6>
+          <h6 class="w3-text-teal"><i class="fas fa-folder-open fa-fw w3-margin-right"></i>Administración de proyectos</h6>
+          <h6 class="w3-text-teal"><i class="fas fa-folder-open fa-fw w3-margin-right"></i>Otros</h6>
+        </div>
+      </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>“Una ves que te has convertido en maestro de algo, deberías convertirte en estudiante de algo nuevo“</p>
+  <p>Gerhart Hauptmann</p>
+  <p>Find me on social media.</p>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html>

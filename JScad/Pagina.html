@@ -1,0 +1,89 @@
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <script src="lib/three.min.js"></script>
+  <script src="lib/orbitcontrols.js"></script>
+  <!-- fallback if no WebGL -->
+  <script src="lib/projector.js"></script>
+  <script src="lib/canvasrenderer.js"></script>
+  <script src="lib/jquery-2.1.3.min.js"></script>
+  <script src="src/csg.js"></script>
+  <script src="src/threecsg.js"></script>
+  <script src="src/openjscad.js"></script>
+  <script src="src/formats.js"></script>
+
+  <style>
+
+body {
+  font: 14px/20px 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+pre, code, textarea {
+  font: 12px/20px Monaco, monospace;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  background: #F9F9F9;
+  padding: 0 3px;
+  color: #555;
+}
+pre, textarea {
+  padding: 10px;
+  width: 100%;
+}
+textarea {
+  height: 200px;
+}
+textarea:focus {
+  outline: none;
+}
+
+canvas { cursor: move; }
+
+  </style>
+<link rel="stylesheet" href="openjscad.css" type="text/css">
+
+<script>
+
+var gProcessor=null;
+
+// Show all exceptions to the user:
+OpenJsCad.AlertUserOfUncaughtExceptions();
+
+function onload()
+{
+  gProcessor = new OpenJsCad.Processor(document.getElementById("viewer"));
+  updateSolid();
+}
+
+function updateSolid()
+{
+  gProcessor.setJsCad(document.getElementById('code').value);
+}
+function getExample(name) {
+  var el = document.getElementById('code');
+  $.get('examples/' + name, function(data) {
+    el.value = data;
+    updateSolid();
+  });
+}
+</script>
+<title>OpenJsCad</title>  
+</head>
+<body onload="onload()">
+  <h1>OpenJsCad</h1>
+Web based solid modeling in Javascript: user editable parametric models, STL and DXF export.
+<div id="viewer"></div>
+  <h2>Playground</h2>
+Try it by entering some code below. Anything you enter will be lost as soon as this page is reloaded;    
+to build your own models you should instead store them in a .jscad file on your computer 
+and use the <a href="processfile.html"><b>OpenJsCad parser</b></a>.
+<br><br> 
+<textarea id="code">
+
+</textarea><br>
+<input type="submit" value="Update" onclick="updateSolid(); return false;">
+<br><br>
+</body>
+</html>

@@ -1,195 +1,226 @@
-<style>
-.collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Roboto", sans-serif
 }
 
-.active, .collapsible:hover {
-  background-color: #555;
+div[class*="photo"] {
+    text-align: left;
+    margin-left: 15px;
 }
 
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
+img {
+    width: 70%;
 }
+
+h1 {
+    font-size: 3em;
+    margin-top: 10px;
+}
+
+h1 p {
+    font-size: 0.5em;
+    color: #555;
+    margin: 0;
+}
+
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: #474e5d;
-  font-family: Helvetica, sans-serif;
+    background-color: #474e5d;
+    font-family: Helvetica, sans-serif;
 }
 
-/* The actual timeline (the vertical ruler) */
-.timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+*[onclick] {
+    cursor: pointer;
 }
 
-/* The actual timeline (the vertical ruler) */
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
+div,
+p {
+    padding-left: 5px;
 }
 
-/* Container around content */
-.container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
+h3 {
+    font-size: 1em;
+    margin: 2px;
 }
 
-/* The circles on the timeline */
-.container::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid #FF9F55;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
+.quotes {
+    font-size: 1.5em;
+    margin: 0;
+    margin-top: 30px;
 }
 
-/* Place the container to the left */
-.left {
-  left: 0;
+.quotes+p {
+    font-size: 0.8em;
+    text-align: right;
+    padding-right: 10%;
 }
 
-/* Place the container to the right */
-.right {
-  left: 50%;
+.quotes+p+p {
+    font-size: 0.8em;
+    text-align: left;
+    padding-left: 100px;
 }
 
-/* Add arrows to the left container (pointing right) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
+#col-l,
+#col-r {
+    height: 850px;
+    overflow: hidden;
 }
 
-/* Add arrows to the right container (pointing left) */
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+#col-r h2 {
+    background-color: rgb(214, 214, 214);
+    padding-left: 15px;
+    border-radius: 15px;
+    border: 1px solid rgb(194, 194, 194);
 }
 
-/* Fix the circle for containers on the right side */
-.right::after {
-  left: -16px;
+#col-l h3 {
+    display: inline-block;
+    width: 90%;
+    background-color: rgb(214, 214, 214);
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(194, 194, 194);
 }
 
-/* The actual content */
-.content {
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
+#capacitation h3 {
+    font-size: 1.5em;
+    padding-left: 25px;
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
-  .timeline::after {
-  left: 31px;
-  }
-  
-  /* Full-width containers */
-  .container {
-  width: 100%;
-  padding-left: 70px;
-  padding-right: 25px;
-  }
-  
-  /* Make sure that all arrows are pointing leftwards */
-  .container::before {
-  left: 60px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-  }
-
-  /* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-  left: 15px;
-  }
-  
-  /* Make all right containers behave like the left ones */
-  .right {
-  left: 0%;
-  }
+#capacitation h3::before {
+    content: '+ ';
 }
+
+#capacitation h4 {
+    font-size: 1.1em;
+    padding-left: 50px;
+}
+
+.area,
+.area .cours,
+.target>div {
+    height: 0;
+    overflow: hidden;
+    transition: height 1s;
+}
+
+.target h2 {
+    margin: 10px 0px;
+}
+
+.target h3:hover,
+.target h2:hover {
+    cursor: pointer;
+    background-color: rgb(185, 185, 185);
+}
+
+.visible>div {
+    transition: height 1s;
+}
+
+#col-l .visible>div {
+    overflow-y: scroll;
+    height: 400px;
+}
+
+#col-r .visible>div {
+    overflow-y: scroll;
+    height: 645px;
+}
+
+.visibleA+div .area {
+    transition: height 0.01s;
+    overflow-y: auto;
+    height: auto;
+}
+
+.visibleB+div .area {
+    transition: height 0.01s;
+    overflow: auto;
+    height: 45px;
+}
+
+.area ul {
+    padding-left: 60px;
+}
+
+.generals-container {
+    height: 0;
+    overflow: hidden;
+    transition: height 1s;
+}
+
+#soft p {
+    padding-left: 30px;
+}
+
+#hobbies img {
+    width: 50px;
+    float: left;
+    margin: 10px;
+}
+
+#hobbies p {
+    padding-left: 80px;
+}
+
+#hobbies h4 {
+    text-align: left;
+    font-size: 1em;
+    padding-left: 80px;
+}
+
+div[onmouseover] {
+    cursor: pointer;
+}
+
 .tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 220px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 0%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
+    width: 220px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    left: -999em;
+    z-index: 2;
+    bottom: 125%;
+    margin-bottom: -20px;
+    opacity: 0;
+    transition: opacity 0.4s;
 }
 
 .tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 30%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    margin-bottom: -14px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
 }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+.tooltip:hover .tooltiptext,
+.photo:hover+.w3-container .tooltip .tooltiptext {
+    left: -50%;
+    visibility: visible;
+    opacity: 1;
+    margin-bottom: 0px;
 }
-</style>

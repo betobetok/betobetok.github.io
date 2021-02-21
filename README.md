@@ -2,6 +2,8 @@
 
 Mi Pagina Curriculum
 
-My CV
+My Curriculum Vitae
 
 Meine Lebenslauf
+
+http://betobetok.bplaced.net/
